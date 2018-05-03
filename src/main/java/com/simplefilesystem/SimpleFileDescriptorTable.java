@@ -85,10 +85,11 @@ public class SimpleFileDescriptorTable {
      * @return -2, -1 and fileDescriptor between 0-31
      */
     public int attachFileToFileDescriptor(SimpleFileDescriptor simpleFileDescriptor) {
-        if(simpleFileDescriptor == null) {
+        if (simpleFileDescriptor == null || !simpleFileDescriptor.validateFileDescriptor()) {
             return -2;
         }
 
+        
         int freeFileDescriptor = getFreeFileDescriptor();
         if(freeFileDescriptor < 0) {
             return -1;
