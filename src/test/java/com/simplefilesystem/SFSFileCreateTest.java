@@ -19,7 +19,7 @@ import static org.mockito.Mockito.when;
  * This is an integration test suite, there is no need to mock
  * Created by parans on 12/26/16.
  */
-@RunWith(MockitoJUnitRunner.class)
+//@RunWith(MockitoJUnitRunner.class)
 public class SFSFileCreateTest {
 
     private static final String FILE_NAME = "Victor";
